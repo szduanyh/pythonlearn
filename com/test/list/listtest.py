@@ -1,6 +1,8 @@
 __author__ = 'dyh'
 # -*- coding: utf-8 -*-
 
+from collections import deque
+
 print('hello 你好！')
 
 classmates = ['Michael', 'Bob', 'Tracy']
@@ -29,3 +31,20 @@ print(classmates)
 # tuple。tuple和list非常类似，但是tuple一旦初始化就不能修改
 teachers = ('Michael', 'Bob', 'Tracy')
 print(teachers)
+
+stack = [3, 8, 2, 6, 4, 5]
+stack.append(6)
+stack.append(7)
+
+print(stack)
+stack.sort()
+print(stack)
+
+stack.pop()
+print(stack)
+
+queue = deque(['Eric', 'John', 'Michael', 'Mark'])
+queue.append('Terry')
+queue.append('Graham')
+print(queue)
+print(queue.popleft())
