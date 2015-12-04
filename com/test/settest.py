@@ -1,5 +1,6 @@
-__author__ = 'dyh'
 # -*- coding: utf-8 -*-
+__author__ = 'dyh'
+
 
 # 大括号或set() 函数可以用来创建集合。注意：想要创建空集合，你必须使用set()而不是{}。后者用于创建空字典，
 basket = {'apple', 'orange', 'apple', 'pear'}
