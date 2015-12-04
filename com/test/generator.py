@@ -1,5 +1,6 @@
-__author__ = 'dyh'
 # -*- coding: utf-8 -*-
+__author__ = 'dyh'
+
 
 L = [x * x for x in range(10)]
 print(L)
