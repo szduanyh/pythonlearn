@@ -1,5 +1,6 @@
+# -*-coding:utf-8-*-
 __author__ = 'dyh'
-# -*- coding: utf-8 -*-
+
 
 from collections import deque
 

@@ -1,5 +1,5 @@
-__author__ = 'dyh'
 # -*- coding: utf-8 -*-
+__author__ = 'dyh'
 
 squares = [x ** 2 for x in range(10)]
 print(squares)
