@@ -21,3 +21,12 @@ def fib(max):
     return 'done'
 
 fib(6)
+
+
+def f(x):
+    return x % 2 != 0 and x % 3 != 0
+
+
+print (filter(f, range(2, 25)))
+
+print([x for x in range(2, 25) if x % 2 != 0 and x % 3 != 0])
