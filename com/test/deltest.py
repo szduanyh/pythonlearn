@@ -4,6 +4,8 @@ import math
 
 __author__ = 'dyh'
 
+print ("My name is %s and weight is %d kg!" % ('Zara', 21))
+
 a = [-1, 2, 3, 4, 5, 666, 77, 123, 232.23]
 del a[0]
 
