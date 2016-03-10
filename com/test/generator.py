@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 __author__ = 'dyh'
 
-
 L = [x * x for x in range(10)]
 print(L)
 
@@ -21,6 +20,7 @@ def fib(max):
         n = n + 1
     return 'done'
 
+
 fib(6)
 
 
@@ -28,6 +28,6 @@ def f(x):
     return x % 2 != 0 and x % 3 != 0
 
 
-print (filter(f, range(2, 25)))
+print(filter(f, range(2, 25)))
 
 print([x for x in range(2, 25) if x % 2 != 0 and x % 3 != 0])
