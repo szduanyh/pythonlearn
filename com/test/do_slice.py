@@ -8,6 +8,8 @@ print(L[0:3])
 # 如果第一个索引是0，还可以省略：
 print(L[:3])
 
+print(L[:10])
+
 print(L[1:3])
 
 print(L[-2:])
