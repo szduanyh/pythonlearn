@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # _*_coding:utf-8_*_
-# Author: wuqi
 
 import requests
 import re
