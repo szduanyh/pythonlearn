@@ -12,6 +12,7 @@ import random
 3、最后存到指定的path
 """
 
+
 # ------------------------------------------------------文档处理--------------------------------------------------------
 # 写入文档
 
@@ -20,12 +21,16 @@ def write(path, text):
     with open(path, 'a', encoding='utf-8') as f:
         f.writelines(text)
         f.write('\n')
+
+
 # 清空文档
 
 
 def truncatefile(path):
     with open(path, 'w', encoding='utf-8') as f:
         f.truncate()
+
+
 # 读取文档
 
 
@@ -35,6 +40,8 @@ def read(path):
         for s in f.readlines():
             txt.append(s.strip())
     return txt
+
+
 # ----------------------------------------------------------------------------------------------------------------------
 # 计算时间差,格式: 时分秒
 
@@ -45,6 +52,8 @@ def gettimediff(start, end):
     h, m = divmod(m, 60)
     diff = ("%02d:%02d:%02d" % (h, m, s))
     return diff
+
+
 # ----------------------------------------------------------------------------------------------------------------------
 # 返回一个随机的请求头 headers
 
@@ -73,6 +82,8 @@ def getheaders():
     UserAgent = random.choice(user_agent_list)
     headers = {'User-Agent': UserAgent}
     return headers
+
+
 # -----------------------------------------------------检查ip是否可用----------------------------------------------------
 
 
@@ -89,7 +100,8 @@ def checkip(targeturl, ip):
     except:
         return False
 
-#-------------------------------------------------------获取代理方法------------
+
+# -------------------------------------------------------获取代理方法------------
 # 免费代理 XiciDaili
 
 
@@ -111,14 +123,15 @@ def findip(type, pagenum, targeturl, path):  # ip类型,页码,目标url,存放i
             write(path=path, text=ip)
             print(ip)
 
-#-----------------------------------------------------多线程抓取ip入口-----------
+
+# -----------------------------------------------------多线程抓取ip入口-----------
 
 
 def getip(targeturl, path):
     truncatefile(path)  # 爬取前清空文档
     start = datetime.datetime.now()  # 开始时间
     threads = []
-    for type in range(4):   # 四种类型ip,每种类型取前三页,共12条线程
+    for type in range(4):  # 四种类型ip,每种类型取前三页,共12条线程
         for pagenum in range(3):
             t = threading.Thread(target=findip, args=(
                 type + 1, pagenum + 1, targeturl, path))
@@ -135,7 +148,7 @@ def getip(targeturl, path):
     print('一共爬取代理ip: %s 个,共耗时: %s \n' % (len(ips), diff))
 
 
-#-------------------------------------------------------启动----------------
+# -------------------------------------------------------启动----------------
 if __name__ == '__main__':
     path = 'ip.txt'  # 存放爬取ip的文档path
     targeturl = 'http://www.cnblogs.com/TurboWay/'  # 验证ip有效性的指定url

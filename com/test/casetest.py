@@ -13,8 +13,7 @@ if var2:
     print(var2)
 
 print("")
-print("Goold bye!")
-
+print("Good bye!")
 
 a, b = 0, 1
 while b < 10:
